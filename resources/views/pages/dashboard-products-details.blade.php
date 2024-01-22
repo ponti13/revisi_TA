@@ -74,7 +74,7 @@
                       <textarea name="description" id="editor">{!! $product->description !!}</textarea>
                     </div>
                   </div>
-                  <div class="col-md-12">
+                  <div class="col-md-12" style="display: none">
                     <div class="form-group">
                       <label>Status Ketersediaan</label>
                       <select name="status_sedia" id="editor">
@@ -83,7 +83,7 @@
                     </select>
                     </div>
                   </div>
-                  
+
                 </div>
                 <div class="row">
                   <div class="col text-right">

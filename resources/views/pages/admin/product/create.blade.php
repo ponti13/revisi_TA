@@ -63,15 +63,15 @@
                       <textarea name="description" id="editor"></textarea>
                     </div>
                   </div>
-                  <div class="col-md-12">
+                  {{-- <div class="col-md-12">
                     <div class="form-group">
                       <label>Status Ketersediaan</label>
-                      <select name="status_sedia" id="editor">
+                      <select name="status_sedia" id="editor" style="display: none">
                         <option value="true">Tersedia</option>
                         <option value="false">Tidak Tersedia</option>
                     </select>
                     </div>
-                  </div>
+                  </div> --}}
                   <div class="col-md-12">
                     <div class="form-group">
                       <label>Thumbnails</label>

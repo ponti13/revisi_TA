@@ -40,7 +40,7 @@
                                     <td>Gambar</td>
                                     <td>Nama &amp; Penjual</td>
                                     <td>Harga</td>
-                                    <td>Jumlah</td>
+                                    {{-- <td>Jumlah</td> --}}
                                     <td>Menu</td>
                                 </tr>
                             </thead>
@@ -62,7 +62,7 @@
                                             <div class="product-title">Rp. {{ number_format($cart->product->price) }}</div>
                                             <div class="product-subtitle">Rupiah</div>
                                         </td>
-                                        <td  style="width: 25%;">
+                                        {{-- <td  style="width: 25%;">
                                             <div class="input-group" style="max-width: 150px;">
                                                 <input type="number" name="amount" id="amount" class="form-control" value="1">
                                                 <div class="input-group-append">
@@ -70,7 +70,7 @@
                                                     <button class="btn btn-outline-secondary" type="button" onclick="incrementAmount()">+</button>
                                                 </div>
                                             </div>
-                                        </td>
+                                        </td> --}}
                                         <td style="width: 20%;">
                                             <form action="{{ route('cart-delete', $cart->id) }}" method="POST">
                                                 @method('DELETE')
@@ -131,38 +131,38 @@
                                             <div class="row mb-3">
                                                 <strong>Alamat Tujuan</strong>
                                                 <div class="col-md-6">
-                                                    <label for="destination_province" class="form-label">Province</label>
+                                                    <label for="destination_province" class="form-label">Provinsi</label>
                                                     <select name="destination_province" id="destination_province"
                                                         class="form-select">
-                                                        <option>Choose Province</option>
+                                                        <option>Pilih Provinsi</option>
                                                     </select>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <label for="destination_city" class="form-label">City</label>
+                                                    <label for="destination_city" class="form-label">Kota</label>
                                                     <select name="destination_city" id="destination_city"
                                                         class="form-select">
-                                                        <option>Choose City</option>
+                                                        <option>Pilih Kota</option>
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="row mb-3">
                                                 <div class="col-md-6">
-                                                    <label for="courier" class="form-label">Courier</label>
+                                                    <label for="courier" class="form-label">Kurir</label>
                                                     <select name="courier" id="courier" class="form-select">
-                                                        <option>Choose Courier</option>
+                                                        <option>Pilih Kurir</option>
                                                         <option value="jne">JNE</option>
                                                         <option value="pos">POS</option>
                                                         <option value="tiki">TIKI</option>
                                                     </select>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <label for="weight" class="form-label">Weight (Gram)</label>
+                                                    <label for="weight" class="form-label">Berat (Gram)</label>
                                                     <input disabled type="number" name="weight" id="weight"
                                                         value="1000" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="col-12">
-                                                <button class="btn btn-primary" id="checkBtn">Check</button>
+                                                <button class="btn btn-primary" id="checkBtn">Cek</button>
                                             </div>
                                         </form>
                                     </div>
@@ -179,7 +179,7 @@
                 @endphp
                     <input type="hidden" name="total_price" value="{{ $totalPrice }}">
 
-                    <div class="row mb-2" data-aos="fade-up" data-aos-delay="200" id="locations">
+                    {{-- <div class="row mb-2" data-aos="fade-up" data-aos-delay="200" id="locations">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="address_one">Alamat 1</label>
@@ -236,29 +236,25 @@
                                 <input type="text" class="form-control" id="phone_number" name="phone_number"
                                     value="{{ Auth::user()->phone_number }}" />
                             </div>
-                        </div>
+                        </div> --}}
 
 
                     </div>
-                    <div class="row" data-aos="fade-up" data-aos-delay="150">
+                    <div class="mx-auto row align-items-center justify-content-center text-center" data-aos="fade-up" data-aos-delay="150">
                         <div class="col-12">
                             <hr />
                         </div>
                         <div class="col-12">
                             <h2 class="mb-1">Informasi Pembayaran</h2>
                             @if ($ongkir != 0)
-                                <p>Harga Total : Rp.{{ number_format($totalPrice ?? 0) }} (telah termasuk ongkir)
-                                </p>
+                                <p>Harga Total : Rp.{{ number_format($totalPrice ?? 0) }} (telah termasuk ongkir)</p>
                             @else
-                                <p class="text-danger">Harga Total : Rp.{{ number_format($totalPrice ?? 0) }} (Harap Cek
-                                    Ongkir Terlebih Dahulu)
-                                </p>
+                                <p class="text-danger">Harga Total : Rp.{{ number_format($totalPrice ?? 0) }} (Harap Cek Ongkir Terlebih Dahulu)</p>
                             @endif
-
-
                         </div>
                     </div>
-                    <div class="row" data-aos="fade-up" data-aos-delay="200">
+
+                    <div class="mx-auto row align-items-center justify-content-center text-center" data-aos="fade-up" data-aos-delay="200">
                         {{-- <div class="col-4 col-md-2">
                 <div class="product-title">Rp.</div>
                 <div class="product-subtitle">Country Tax</div>
@@ -272,7 +268,7 @@
                 <div class="product-subtitle">Ship to Jakarta</div>
               </div> --}}
 
-                        <div class="col-4 col-md-2">
+                        <div class="col-12 col-md-12 ">
                             <div class="product-title text-success">Rp.{{ number_format($totalPrice ?? 0) }}</div>
                             <div class="product-subtitle">Total</div>
                         </div>

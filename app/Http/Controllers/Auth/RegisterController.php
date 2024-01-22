@@ -71,7 +71,7 @@ class RegisterController extends Controller
             'store_name' => ['nullable', 'string', 'max:255'],
             'categories_id' => ['nullable', 'integer', 'exists:categories,id'],
             'is_store_open' => ['required'],
-            'photo' => ['nullable', 'image', 'max:2048'],
+            'photo' => ['nullable', 'image', 'max:20480'],
         ]);
     }
 

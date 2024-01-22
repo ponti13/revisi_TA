@@ -72,12 +72,12 @@
           <div class="container">
             <div class="row">
               <div class="col-lg-8">
-                <h1>{{ $product->name }} @if ($product->status_sedia)
+                {{-- <h1>{{ $product->name }} @if ($product->status_sedia)
                     <div class="btn btn-success">Tersedia</div>
                 @else
                     <div class="btn btn-danger">Pre Order</div>
                 @endif
-                </h1>
+                </h1> --}}
                 <div class="owner">Toko : {{ $product->user->store_name }}</div>
                 <div class="price">Rp. {{ number_format($product->price ?? 0) }}</div>
               </div>
